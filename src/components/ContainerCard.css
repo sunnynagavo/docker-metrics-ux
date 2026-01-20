@@ -1,0 +1,221 @@
+.container-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.container-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.container-card.selected {
+  border-color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.container-card.running {
+  border-left: 3px solid #10b981;
+}
+
+.container-card.stopped {
+  border-left: 3px solid #ef4444;
+  opacity: 0.7;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.container-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.container-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container-image {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-family: 'Courier New', monospace;
+}
+
+.status-badges {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.status-badge {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.health-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.container-id {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+}
+
+.container-id .label {
+  color: #64748b;
+}
+
+.container-id .value {
+  color: #94a3b8;
+}
+
+.restarts {
+  margin-left: auto;
+  color: #f59e0b;
+  font-size: 0.7rem;
+}
+
+.metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.metric-value {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.metric-detail {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+.compact-stats {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-size: 0.75rem;
+  color: #00d4ff;
+  font-weight: 500;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.75rem;
+}
+
+.ports, .uptime {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.ports .label, .uptime .label {
+  font-size: 0.8rem;
+}
+
+.ports .value, .uptime .value {
+  color: #94a3b8;
+}
+
+.selected-indicator {
+  margin-top: 10px;
+  padding: 6px;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #00d4ff;
+}
