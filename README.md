@@ -33,7 +33,7 @@ A real-time React dashboard for monitoring Docker container metrics, logs, and r
 
 ---
 
-## 🗂 Project Structure
+## 🗂 Root Project Structure
 
 ```
 docker-metrics-ux/
