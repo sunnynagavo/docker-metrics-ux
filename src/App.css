@@ -30,6 +30,52 @@
   font-size: 1.1rem;
 }
 
+.env-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-top: 10px;
+  border: 1px solid;
+}
+
+.env-badge.docker {
+  background: rgba(0, 212, 255, 0.12);
+  color: #00d4ff;
+  border-color: rgba(0, 212, 255, 0.35);
+}
+
+.env-badge.local {
+  background: rgba(124, 58, 237, 0.12);
+  color: #a78bfa;
+  border-color: rgba(124, 58, 237, 0.35);
+}
+
+.env-icon {
+  font-size: 1rem;
+}
+
+.env-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.env-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.env-hostname {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  font-family: monospace;
+}
+
 .live-indicator {
   position: absolute;
   right: 0;

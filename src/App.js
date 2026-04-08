@@ -106,6 +106,11 @@ const generateLogs = (containerName) => {
   }));
 };
 
+const runtimeConfig = window.__RUNTIME_CONFIG__ || null;
+const runtimeEnv = runtimeConfig ? 'docker' : 'local';
+const runtimeHostname = runtimeConfig ? runtimeConfig.hostname : window.location.hostname;
+const runtimePlatform = runtimeConfig ? runtimeConfig.platform : null;
+
 function App() {
   const [containers, setContainers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -220,6 +225,13 @@ function App() {
       <header className="header">
         <h1>🐳 Docker Container Metrics</h1>
         <p className="subtitle">Real-time monitoring dashboard</p>
+        <div className={`env-badge ${runtimeEnv}`}>
+          <span className="env-icon">{runtimeEnv === 'docker' ? '🐳' : '💻'}</span>
+          <span className="env-details">
+            <span className="env-label">{runtimeEnv === 'docker' ? 'Docker' : 'Local'}</span>
+            <span className="env-hostname">{runtimeHostname}{runtimePlatform ? ` · ${runtimePlatform}` : ''}</span>
+          </span>
+        </div>
         <div className="live-indicator">
           <span className="pulse"></span>
           Live
