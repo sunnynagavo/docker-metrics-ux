@@ -125,6 +125,7 @@ The CLI will prompt you to choose your account and whether you need GPU support.
 docker build -t docker-metrics-ux .
 docker run -d -p 3000:80 --name docker-metrics-ux docker-metrics-ux
 ```
+<img width="1099" height="595" alt="image" src="https://github.com/user-attachments/assets/a1b95882-e471-4b15-88af-4b155bca2d00" />
 
 Even though the commands look identical, the build and the container are running on a remote Linux machine in the cloud.
 
@@ -133,6 +134,9 @@ Even though the commands look identical, the build and the container are running
 [http://localhost:3000](http://localhost:3000)
 
 The header badge now shows the **remote machine's hostname and architecture** — this is how you can visually confirm Docker Offload is active:
+
+<img width="1093" height="569" alt="image" src="https://github.com/user-attachments/assets/b1f75ec0-f02b-4b09-a748-197124277aca" />
+
 
 | Running mode | Badge |
 |---|---|
